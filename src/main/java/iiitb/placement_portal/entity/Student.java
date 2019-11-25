@@ -2,7 +2,7 @@ package iiitb.placement_portal.entity;
 
 import java.time.Year;
 import java.util.Date;
-
+import iiitb.placement_portal.entity.*;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,6 +21,7 @@ public class Student {
 	private String phone;
 	private float cgpa;
 	private String stream;
+	private String course;
 	private String batch;
 	private Year placementYear;
 	private String address;
@@ -45,6 +46,12 @@ public class Student {
 	}
 	public void setId(Integer id) {
 		this.id = id;
+	}
+	public String getCourse() {
+		return course;
+	}
+	public void setCourse(String course) {
+		this.course = course;
 	}
 	public String getRollNo() {
 		return rollNo;
@@ -218,10 +225,10 @@ public class Student {
 		// TODO Auto-generated constructor stub
 	}
 	public Student(Integer id, String rollNo, String email, String password, String name, String phone, float cgpa,
-			String stream, String batch, Year placementYear, String address, String pincode, String state,
-			String nationality, String xBoard, float xPercentage, Year xYear, String xiiBoard, float xiiPercentage,
-			Year xiiYear, String undergraduateUniversity, String undergraduateDegree, Year undergraduateYear,
-			float undergraduatePercentage, String gender, Date dob, String image) {
+			String stream, String course, String batch, Year placementYear, String address, String pincode,
+			String state, String nationality, String xBoard, float xPercentage, Year xYear, String xiiBoard,
+			float xiiPercentage, Year xiiYear, String undergraduateUniversity, String undergraduateDegree,
+			Year undergraduateYear, float undergraduatePercentage, String gender, Date dob, String image) {
 		super();
 		this.id = id;
 		this.rollNo = rollNo;
@@ -231,6 +238,7 @@ public class Student {
 		this.phone = phone;
 		this.cgpa = cgpa;
 		this.stream = stream;
+		this.course = course;
 		this.batch = batch;
 		this.placementYear = placementYear;
 		this.address = address;
@@ -251,7 +259,5 @@ public class Student {
 		this.dob = dob;
 		this.image = image;
 	}
-	
-	
 }
 
